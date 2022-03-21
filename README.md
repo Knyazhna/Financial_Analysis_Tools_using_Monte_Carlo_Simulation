@@ -69,11 +69,28 @@ savings_df = pd.DataFrame(saving_data,
 
 **Create the Monte Carlo Simulation**
 
+```
+MC_thirty_year = MCSimulation(
+    portfolio_data = prices_df,
+    weights = [.40, .60],
+    num_simulation = 500,
+    num_trading_days = 252 * 30
+```
+
 **Analyze the Retirement Portfolio Forecasts**
+
+```
+ci_lower_thirty_cumulative_return = MC_thirty_year_summary_statistics[8] * total_stock_bond_balance
+ci_upper_thirty_cumulative_return = MC_thirty_year_summary_statistics[9] * total_stock_bond_balance
+```
+![30-year Monte Carlo simulation](Images/30yearplot.png)
 
 **Forecast Cumulative Returns in 10 Years**
 
-
+```
+MC_ten_year_summary_statistics = MC_ten_year.summarize_cumulative_return()
+```
+![10-year Monte Carlo simulation](Images/10yearplot.png)
 
 ## Contributors
 
