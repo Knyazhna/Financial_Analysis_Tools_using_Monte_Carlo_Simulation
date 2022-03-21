@@ -42,15 +42,18 @@ from MCForecastTools import MCSimulation
 <br>
 
 **Evaluate the Cryptocurrency Wallet by Using the Requests Library**
+
 Determine the current value of a member’s cryptocurrency wallet. Use `requests.get` library to get the current price of Bitcoin (BTC) and Ethereum (ETH) and calculate total value of crypto portfolio.
 
 **Evaluate the Stock and Bond Holdings by Using the Alpaca SDK**
+
 Determine the current value of a member’s stock and bond holdings. Set the parameters `tickers`, `timeframe`, `start_date`, `end_date` and make an API call to Alpaca via the Alpaca SDK to get the current closing prices of the [S&P 500](https://en.wikipedia.org/wiki/S%26P_500 "S&P 500") and of the [AGG](https://www.ishares.com/us/products/239458/ishares-core-total-us-bond-market-etf).
 Get the current closing prices for SPY and AGG by using the Alpaca `get_bars` function and calculate the value of the stock and bond portfolio.
 
 **Evaluate the Emergency Fund**
 
-`savings_df`
+Use the valuations for the cryptocurrency wallet and for the stock and bond portions of the portfolio and create `savings_df` to determine if the credit union member has enough savings to build an emergency fund into their financial plan.
+
 
 ```
 savings_df = pd.DataFrame(saving_data,
@@ -59,12 +62,16 @@ savings_df = pd.DataFrame(saving_data,
 )
 ```
 
+Pie chart created to visualize the composition of the member’s portfolio.
+
 ![Portfolio Composition](Images/Piechart.png)
 
 ### Part 2: Create a Financial Planner for Retirement
 <br>
 
 **Create the Monte Carlo Simulation**
+
+Use the MCForecastTools library to create a Monte Carlo simulation for the member’s savings portfolio.
 
 ```
 MC_thirty_year = MCSimulation(
@@ -76,13 +83,18 @@ MC_thirty_year = MCSimulation(
 
 **Analyze the Retirement Portfolio Forecasts**
 
+Use the current value of only the stock and bond portion of the member's portfolio and the summary statistics generated from the Monte Carlo simulation to analyze retirement portfolio forecasts.
+
 ```
 ci_lower_thirty_cumulative_return = MC_thirty_year_summary_statistics[8] * total_stock_bond_balance
 ci_upper_thirty_cumulative_return = MC_thirty_year_summary_statistics[9] * total_stock_bond_balance
 ```
+
 ![30-year Monte Carlo simulation](Images/30yearplot.png)
 
 **Forecast Cumulative Returns in 10 Years**
+
+Adjust the retirement portfolio and run a new Monte Carlo simulation to find out if the changes in stok weight % will allow members to retire earlier.
 
 ```
 MC_ten_year_summary_statistics = MC_ten_year.summarize_cumulative_return()
