@@ -42,14 +42,11 @@ from MCForecastTools import MCSimulation
 <br>
 
 **Evaluate the Cryptocurrency Wallet by Using the Requests Library**
-Bitcoin (BTC) and Ethereum (ETH)
+Determine the current value of a member’s cryptocurrency wallet. Use `requests.get` library to get the current price of Bitcoin (BTC) and Ethereum (ETH) and calculate total value of crypto portfolio.
 
 **Evaluate the Stock and Bond Holdings by Using the Alpaca SDK**
-tickers
-timeframe
-start_date
-end_date
-get_bars
+Determine the current value of a member’s stock and bond holdings. Set the parameters `tickers`, `timeframe`, `start_date`, `end_date` and make an API call to Alpaca via the Alpaca SDK to get the current closing prices of the [S&P 500](https://en.wikipedia.org/wiki/S%26P_500 "S&P 500") and of the [AGG](https://www.ishares.com/us/products/239458/ishares-core-total-us-bond-market-etf).
+Get the current closing prices for SPY and AGG by using the Alpaca `get_bars` function and calculate the value of the stock and bond portfolio.
 
 **Evaluate the Emergency Fund**
 
