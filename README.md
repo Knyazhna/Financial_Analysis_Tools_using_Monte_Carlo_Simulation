@@ -5,7 +5,7 @@ Part 1: A financial planner for emergencies. The members will be able to use thi
 
 Part 2: A financial planner for retirement. This tool will forecast the performance of their retirement portfolio in 30 years. To do this, the tool will make an [Alpaca API](https://alpaca.markets/docs/) call via the [Alpaca SDK](https://github.com/alpacahq/alpaca-trade-api-python/) to get historical price data for use in [Monte Carlo simulations](https://www.rdocumentation.org/packages/decisionSupport/versions/1.110/topics/mcSimulation).
 
-We will use the information from the Monte Carlo simulation to answer questions about the portfolio.
+We will use the information from the Monte Carlo simulation to analyse and visualize the portfolio.
 
 ## Technologies
 Financial Planning with APIs and Simulations project leverages python 3.7 with the following packages:
@@ -38,12 +38,32 @@ from MCForecastTools import MCSimulation
 
 ## Usage
 
-**Part 1: Create a Financial Planner for Emergencies**
+###Part 1: Create a Financial Planner for Emergencies
 <br>
-
-**Part 2: Create a Financial Planner for Retirement**
+**Evaluate the Cryptocurrency Wallet by Using the Requests Library**
+Bitcoin (BTC) and Ethereum (ETH)
+**Evaluate the Stock and Bond Holdings by Using the Alpaca SDK**
+tickers
+timeframe
+start_date
+end_date
+get_bars
+**Evaluate the Emergency Fund**
+`savings_df`
+```
+savings_df = pd.DataFrame(saving_data,
+     index=["Crytpo","Stock/Bond"],
+     columns = ["Amount"]
+)
+```
+![Portfolio Composition](Piechart.png)
+###Part 2: Create a Financial Planner for Retirement
 <br>
+**Create the Monte Carlo Simulation**
 
+**Analyze the Retirement Portfolio Forecasts**
+
+**Forecast Cumulative Returns in 10 Years**
 
 
 
