@@ -40,25 +40,33 @@ from MCForecastTools import MCSimulation
 
 ### Part 1: Create a Financial Planner for Emergencies
 <br>
+
 **Evaluate the Cryptocurrency Wallet by Using the Requests Library**
 Bitcoin (BTC) and Ethereum (ETH)
+
 **Evaluate the Stock and Bond Holdings by Using the Alpaca SDK**
 tickers
 timeframe
 start_date
 end_date
 get_bars
+
 **Evaluate the Emergency Fund**
+
 `savings_df`
+
 ```
 savings_df = pd.DataFrame(saving_data,
      index=["Crytpo","Stock/Bond"],
      columns = ["Amount"]
 )
 ```
-![Portfolio Composition](/Images/Piechart.png)
+
+![Portfolio Composition](Images/Piechart.png)
+
 ### Part 2: Create a Financial Planner for Retirement
 <br>
+
 **Create the Monte Carlo Simulation**
 
 **Analyze the Retirement Portfolio Forecasts**
