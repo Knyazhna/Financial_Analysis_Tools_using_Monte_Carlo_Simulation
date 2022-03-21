@@ -38,7 +38,7 @@ from MCForecastTools import MCSimulation
 
 ## Usage
 
-###Part 1: Create a Financial Planner for Emergencies
+### Part 1: Create a Financial Planner for Emergencies
 <br>
 **Evaluate the Cryptocurrency Wallet by Using the Requests Library**
 Bitcoin (BTC) and Ethereum (ETH)
@@ -56,8 +56,8 @@ savings_df = pd.DataFrame(saving_data,
      columns = ["Amount"]
 )
 ```
-![Portfolio Composition](Piechart.png)
-###Part 2: Create a Financial Planner for Retirement
+![Portfolio Composition](/Images/Piechart.png)
+### Part 2: Create a Financial Planner for Retirement
 <br>
 **Create the Monte Carlo Simulation**
 
